@@ -20,7 +20,7 @@ public class MainObstaculo {
             ay = ler.nextInt();
             ler.nextLine();
 
-            if (ax >= 0 && ax < 4 && ay >= 0 && ay < 4) {
+            if (ax >= 0 && ax < 4 && ay >= 0 && ay < 4 && !(ax ==0 && ay ==0)) {
                 break;
             }
             System.out.println("Posição inválida! Tente novamente.\n");
@@ -38,7 +38,7 @@ public class MainObstaculo {
             by = ler.nextInt();
             ler.nextLine();
 
-            if (bx >= 0 && bx < 4 && by >= 0 && by < 4) {
+            if (bx >= 0 && bx < 4 && by >= 0 && by < 4 && !(bx == 0 && by == 0)) {
                 break;
             }
             System.out.println("Posição inválida! Tente novamente.\n");
@@ -53,7 +53,7 @@ public class MainObstaculo {
             ry = ler.nextInt();
             ler.nextLine();
 
-            if (rx >= 0 && rx < 4 && ry >= 0 && ry < 4) {
+            if (rx >= 0 && rx < 4 && ry >= 0 && ry < 4 && !(rx == 0 && ry ==0)) {
                 break;
             }
             System.out.println("Posição inválida! Tente novamente.\n");
@@ -92,7 +92,7 @@ public class MainObstaculo {
                     break;
                 }
 
-                Thread.sleep(700);
+                Thread.sleep(1000);
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
@@ -115,9 +115,9 @@ public class MainObstaculo {
             System.out.format("Ambos os robôs sobreviveram!\n");
         }
 
-        System.out.format("🤖 Robô normal: %d movimentos válidos | %d inválidos\n",
+        System.out.format("Robô normal: %d movimentos válidos | %d inválidos\n",
                 robo1.getMovimentosValidos(), robo1.getMovimentosInvalidos());
-        System.out.format("🧠 Robô inteligente: %d movimentos válidos | %d inválidos\n",
+        System.out.format("Robô inteligente: %d movimentos válidos | %d inválidos\n",
                 robo2.getMovimentosValidos(), robo2.getMovimentosInvalidos());
 
         ler.close();

@@ -35,7 +35,7 @@ public class Tabuleiro {
                 String celula = " . ";
 
                 if (alimento.getX() == x && alimento.getY() == y) {
-                    celula = " 🥕 ";
+                    celula = " 🍎 ";
                 }
 
                 for (Obstaculo o : obstaculos) {
@@ -43,7 +43,7 @@ public class Tabuleiro {
                         if (o instanceof interaveis.Bomba)
                             celula = " 💣 ";
                         else if (o instanceof interaveis.Rocha)
-                            celula = " ⛰️ ";
+                            celula = " 🪨 ";
                     }
                 }
 
@@ -54,7 +54,7 @@ public class Tabuleiro {
                         else if (r instanceof RoboInteligente)
                             celula = " 🤖 ";
                         else
-                            celula = " 🤯 ";
+                            celula = " 👾 ";
                     }
                 }
 

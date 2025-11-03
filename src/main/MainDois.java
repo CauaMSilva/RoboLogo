@@ -21,10 +21,10 @@ public class MainDois {
         	System.out.print("Posição do alimento Y(0 a 3): ");
         	ay = ler.nextInt();
         	ler.nextLine();
-        	if (ax >= 0 && ax < 5 && ay >= 0 && ay < 5) {
+        	if (ax >= 0 && ax < 4 && ay >= 0 && ay < 4 && !(ax == 0 && ay == 0)) {
         		break;
         	}
-        	System.out.print("Posição inválida");
+        	System.out.print("Posição inválida\n");
         }
         
         Alimento alimento = new Alimento(ax, ay);
@@ -59,15 +59,15 @@ public class MainDois {
                     break;
                 }
 
-                Thread.sleep(700);
+                Thread.sleep(1000);
             } catch (Exception e) {
                 System.out.println("⚠️ " + e.getMessage());
             }
         }
 
         System.out.println("\n--- Resultados ---");
-        System.out.format("Robô 1 (vermelho): válidos = %d | inválidos = %d", robo1.getMovimentosValidos(), robo1.getMovimentosInvalidos());
-        System.out.format("Robô 2 (azul): válidos = %d | inválidos = %d" + robo2.getMovimentosValidos(), robo2.getMovimentosInvalidos());
+        System.out.format("Robô 1 (vermelho): válidos = %d | inválidos = %d\n", robo1.getMovimentosValidos(), robo1.getMovimentosInvalidos());
+        System.out.format("Robô 2 (azul): válidos = %d | inválidos = %d", robo2.getMovimentosValidos(), robo2.getMovimentosInvalidos());
         ler.close();
     }
 }

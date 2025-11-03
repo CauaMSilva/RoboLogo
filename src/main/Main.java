@@ -11,8 +11,6 @@ public class Main {
         Scanner ler = new Scanner(System.in);
         Random rand = new Random();
 
-        System.out.println("=== 🐢 Jogo do Robô - Modo 1 (Manual) ===");
-
         RoboNormal robo = new RoboNormal("Azul");
         
         //criaçao do tabuleiro
@@ -25,10 +23,10 @@ public class Main {
         	System.out.print("Posição do alimento Y(0 a 3): ");
         	ay = ler.nextInt();
         	ler.nextLine();
-        	if (ax >= 0 && ax < 5 && ay >= 0 && ay < 5) {
+        	if (ax >= 0 && ax < 4 && ay >= 0 && ay < 4 && !(ax == 0 && ay == 0)) {
         		break;
         	}
-        	System.out.print("Posição inválida");
+        	System.out.print("Posição inválida\n");
         }
         
         Alimento alimento = new Alimento(ax, ay);
@@ -38,7 +36,7 @@ public class Main {
         List<Robo> robos = new ArrayList<>();
         robos.add(robo);
 
-        List<Obstaculo> obstaculos = new ArrayList<>(); // vazio por enquanto
+        List<Obstaculo> obstaculos = new ArrayList<>();
 
         tabuleiro.mostrar(robos, alimento, obstaculos);
 

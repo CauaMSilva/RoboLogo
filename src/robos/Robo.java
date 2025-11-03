@@ -36,7 +36,7 @@ public abstract class Robo {
     }
     public int getMovimentosValidos() { 
     	return movimentosValidos; 
-    	}
+    }
     public int getMovimentosInvalidos() { 
     	return movimentosInvalidos; 
     }
